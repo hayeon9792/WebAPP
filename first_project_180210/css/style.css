@@ -1,0 +1,30 @@
+
+  header {
+    border-bottom: 2px solid gray;
+    padding: 20px;
+    padding-left: 100px;
+  }
+
+  nav {
+    border-right: 1px solid gray;
+    width: 250px;
+    height:auto;
+    float: left;
+  }
+  nav ol{
+    list-style-type:none;
+    font-size: 20px;
+  }
+
+  article {
+float: left;
+padding: 20px;
+  }
+
+  article li {
+    list-style: none;
+
+  }
+  article h2 {
+    font-size: 30px;
+  }
