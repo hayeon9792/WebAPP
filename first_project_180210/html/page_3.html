@@ -3,20 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/css/style.css">
-
   </head>
-  <body>
+  <body id="target">
     <header>
       <h1><a href="http://localhost/web_project/first_project_180210/html/index.html">냥냥이의 하루일과</a></h1>
     </header>
     <nav>
     <ol>
-      <li id = "todo"><h2>TODAY</h2></li>
+      <li><h2>TODAY</h2></li>
       <li><a href="http://localhost/web_project/first_project_180210/html/page_1.html">08:00 Wake up!</a></li>
       <li><a href="http://localhost/web_project/first_project_180210/html/page_2.html">10:00 Eat!</a></li>
       <li><a href="http://localhost/web_project/first_project_180210/html/page_3.html">12:00 Take a nap!</a></li>
     </ol>
   </nav>
+
+  <div id = "control">
+    <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
+    <input type="button" value="blue"onclick="document.getElementById('target').className='blue'"/>
+  </div>
+
+
   <article>
     <h2>12:00 Take a nap!</h2>
     밥을 먹고나서 낮잠을 잔다.
