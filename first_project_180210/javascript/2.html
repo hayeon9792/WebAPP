@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    ul li{
+      font-size: 40px;
+    }
+    .fg {
+      text-decoration: underline;
+    }
+    </style>
+  </head>
+  <body>
+    <ol id="target">
+      <li>html</li>
+      <li>css</li>
+      <li>javascript</li>
+    </ol>
+    <ul>
+      <li>이호준</li>
+      <li>김화실</li>
+      <li>이성미</li>
+      <li class="fg">이하연</li>
+    </ul>
+    <input type="button" value="밑줄"
+    onclick="document.getElementById('target').className='fg'">
+  </body>
+</html>
