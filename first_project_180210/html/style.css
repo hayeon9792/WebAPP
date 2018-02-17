@@ -28,11 +28,13 @@ body.blue {
   nav ol{
     list-style-type:none;
     font-size: 20px;
+    padding: 0px;
   }
 
   article {
 float: left;
 padding: 20px;
+width: 500px;
   }
 
 #control {
