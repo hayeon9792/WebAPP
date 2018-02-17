@@ -1,4 +1,4 @@
 <?php
-  echo $_GET['title'].'<br>';
-  echo $_GET['description'];
+  echo $_POST['title'].'<br>';
+  echo $_POST['description'];
 ?>
