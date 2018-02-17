@@ -1,3 +1,21 @@
+<?php
+  $conn = mysqli_connect('localhost','root','gkdus9792'); // MySQL 접속
+  mysqli_select_db($conn, 'webrich'); // DB선택
+  $res = mysqli_query($conn, "SELECT * FROM homepage"); //topic 테이블 가져옴
+
+  /*
+  $row = mysqli_fetch_assoc($res); // 조회한 테이블의 첫번째 행을 return,
+                                   // 형식은 association(연관배열)
+  echo $row['id']."<br>";          // 연관배열 형식이므로, 'id'를 넣으면 "1"
+  echo $row['title']."<br>";       // 'title'을 넣으면 "About JavaScription"
+
+  echo "--------------<br>";
+  $row = mysqli_fetch_assoc($res); // 두번쨰 실행 시 두번째 행을 가져옴
+  echo $row['id']."<br>";
+  echo $row['title']."<br>";
+  */
+
+ ?>
 <!DOCTYPE html>
   <html>
   <head>
@@ -12,7 +30,9 @@
     <nav>
     <ol>
       <?php
-        echo file_get_contents("list.txt");
+      while($row = mysqli_fetch_assoc($res)){
+        echo '<li><a href="http://localhost/web_project/first_project_180210/html/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
+      }
        ?>
     </ol>
   </nav>
@@ -24,11 +44,24 @@
 
   <article>
     <?php
+    /*
       if(!empty($_GET['id'])) {
         echo file_get_contents($_GET['id'].".txt");
       } else {
         echo file_get_contents("title.txt");
       }
+    */
+    if(!empty($_GET['id'])){
+
+    $sql = 'SELECT * FROM homepage WHERE id='.$_GET['id']; // SQL문을 변수로 저장해서 사용
+    $res = mysqli_query($conn, $sql);
+    $row=mysqli_fetch_assoc($res);
+    
+    echo '<h2>'.$row['title'].'</h2>';
+    echo $row['description'];
+  } else {
+    echo file_get_contents("title.txt");
+  }
      ?>
   </article>
 
