@@ -52,11 +52,26 @@
         작성자: <input type="text" name="author">
       </p>
       <p>
-        본문: <textarea name="description"></textarea>
+        본문: <textarea name="description" id="description"></textarea>
       </p>
+      <input type="hidden" role="uploadcare-uploader" name="content"
+       data-crop="disabled"
+       data-images-only="true" />
       <input type="submit" name="name">
     </form>
   </article>
+
+  <script>
+    UPLOADCARE_LOCALE = "ko";
+    UPLOADCARE_TABS = "file url facebook gdrive gphotos dropbox instagram evernote flickr skydrive";
+    UPLOADCARE_PUBLIC_KEY = "cdbd6bc682173fee40bc";
+  </script>
+
+  <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.2.2/uploadcare.full.min.js"></script>
+
+<script>
+
+</script>
 
   </body>
 </html>
