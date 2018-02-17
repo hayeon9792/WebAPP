@@ -40,3 +40,16 @@ width: 500px;
 #control {
   float: right;
 }
+
+#description {
+  width: 400px;
+  height: 200px;
+}
+
+#title {
+  width:400px;
+}
+
+#author {
+  width: 400px;
+}

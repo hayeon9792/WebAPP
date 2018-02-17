@@ -46,10 +46,10 @@
   <article>
     <form action="process.php" method="post">
       <p>
-        제목: <input type="text" name="title">
+        제목: <input type="text" name="title" id = "title">
       </p>
       <p>
-        작성자: <input type="text" name="author">
+        작성자: <input type="text" name="author" id= "author">
       </p>
       <p>
         본문: <textarea name="description" id="description"></textarea>
@@ -70,6 +70,13 @@
   <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.2.2/uploadcare.full.min.js"></script>
 
 <script>
+// role의 값이 uploadcare-uploader인 태그를 업로드 위젯으로 만들어라.
+var singleWidget = uploadcare.SingleWidget('[role=uploadcare-uploader]');
+// 그 위젯을 통해 업로드가 완료되면,
+singleWidget.onUploadComplete(function(info){
+  // id = 'description' 인 태그의 값 뒤에 업로드한 이미지 파일의 주소를 이미지 태그와 함께 첨부해라.
+  document.getElementById('description').value = document.getElementById('description').value + '<img src="' + info.cdnUrl +'">';
+});
 
 </script>
 
