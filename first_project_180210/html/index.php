@@ -2,10 +2,11 @@
   <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/html/style.css">
   </head>
   <body id="target">
     <header>
+      <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치">
       <h1><a href="http://localhost/web_project/first_project_180210/html/index.php">냥냥이의 하루일과</a></h1>
     </header>
     <nav>
@@ -32,4 +33,4 @@
   </article>
 
   </body>
-  </html>
+</html>
