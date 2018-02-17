@@ -1,0 +1,4 @@
+<li><h2>TODAY</h2></li>
+<li><a href="http://localhost/web_project/first_project_180210/html/index.php?id=1">08:00 Wake up!</a></li>
+<li><a href="http://localhost/web_project/first_project_180210/html/index.php?id=2">10:00 Eat!</a></li>
+<li><a href="http://localhost/web_project/first_project_180210/html/index.php?id=3">12:00 Take a nap!</a></li>
