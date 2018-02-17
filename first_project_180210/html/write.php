@@ -44,26 +44,18 @@
   </div>
 
   <article>
-    <?php
-    /*
-      if(!empty($_GET['id'])) {
-        echo file_get_contents($_GET['id'].".txt");
-      } else {
-        echo file_get_contents("title.txt");
-      }
-    */
-    if(!empty($_GET['id'])){
-
-    $sql = 'SELECT * FROM homepage WHERE id='.$_GET['id']; // SQL문을 변수로 저장해서 사용
-    $res = mysqli_query($conn, $sql);
-    $row=mysqli_fetch_assoc($res);
-
-    echo '<h2>'.$row['title'].'</h2>';
-    echo $row['description'];
-  } else {
-    echo file_get_contents("title.txt");
-  }
-     ?>
+    <form action="process.php" method="post">
+      <p>
+        제목: <input type="text" name="title">
+      </p>
+      <p>
+        작성자: <input type="text" name="author">
+      </p>
+      <p>
+        본문: <textarea name="description"></textarea>
+      </p>
+      <input type="submit" name="name">
+    </form>
   </article>
 
   </body>
