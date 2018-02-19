@@ -4,7 +4,7 @@
   $sql = "SELECT * FROM user WHERE name='".$_GET['name']."' AND password='".$_GET['password']."'";
   //echo "확인용 sql문: ".$sql;
   $res = mysqli_query($conn, $sql); //topic 테이블 가져옴
-  echo "<br/>";
+  //echo "<br/>";
   //var_dump($res->num_rows);
 ?>
 
