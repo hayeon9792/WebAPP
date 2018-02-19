@@ -1,6 +1,5 @@
 <?php
-  $conn = mysqli_connect("localhost","root","gkdus9792");
-  mysqli_select_db($conn, "webrich");
+  require("lib/db.php");
   $sql = "INSERT INTO homepage (title, description, author, created) VALUES ('".$_POST['title']."','".$_POST['description']."','".$_POST['author']."',now())";
   $res = mysqli_query($conn, $sql);
 

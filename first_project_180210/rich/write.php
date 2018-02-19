@@ -1,6 +1,5 @@
 <?php
-  $conn = mysqli_connect('localhost','root','gkdus9792'); // MySQL 접속
-  mysqli_select_db($conn, 'webrich'); // DB선택
+  require("lib/db.php");
   $res = mysqli_query($conn, "SELECT * FROM homepage"); //topic 테이블 가져옴
 
   /*
