@@ -6,7 +6,7 @@
   <body>
     <?php
       $password = $_GET["password"];
-      if($password == 1111) {
+      if($password == "1111") {
         echo "로그인 되었습니다.";
       } else {
         echo "비밀번호를 확인해주세요.";
