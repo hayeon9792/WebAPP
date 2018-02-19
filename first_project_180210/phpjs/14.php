@@ -9,7 +9,7 @@
   echo "<br/>";
   //var_dump($res->num_rows);
 ?>
-
+<!-- php DB를 사용한 비밀번호 -->
 <!DOCTYPE html>
 <html>
   <head>
