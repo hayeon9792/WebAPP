@@ -1,5 +1,6 @@
 <?php
   require("lib/db.php");
+  $conn = db_init("localhost","root","gkdus9792","webrich");
   $res = mysqli_query($conn, "SELECT * FROM homepage"); //topic 테이블 가져옴
 
   /*
