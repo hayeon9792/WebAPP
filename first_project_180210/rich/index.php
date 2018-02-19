@@ -22,6 +22,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/rich/style.css">
   </head>
+
   <body id="target">
     <header>
       <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치">
@@ -40,7 +41,10 @@
   <div id = "control">
     <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
     <input type="button" value="blue"onclick="document.getElementById('target').className='blue'"/>
-    <a href="http://localhost/web_project/first_project_180210/rich/write.php">글 작성</a>
+
+
+
+    <a href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
   </div>
 
   <article>
