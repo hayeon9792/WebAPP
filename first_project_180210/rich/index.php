@@ -63,8 +63,7 @@
     $row=mysqli_fetch_assoc($res);
 
     echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
-    echo '<p>'.htmlspecialchars($row['name']).'</p>';
-    echo htmlspecialchars($row['description']);
+    echo strip_tags($row['description'],'<a><h1><h2><h3><li><ol>');
   } else {
     echo file_get_contents("title.txt");
   }
