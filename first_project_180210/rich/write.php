@@ -30,8 +30,8 @@
   <!--
   <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/rich/style.css">
   -->
-  <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/rich/style2.css">
-    <link href="http://localhost/web_project/first_project_180210/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/web_project/first_project_180210/rich/style2.css">
+    <link href="/web_project/first_project_180210/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body id="target">
@@ -39,7 +39,7 @@
       <header class="jumbotron text-center">
       <!--  <div class="text-center"> -->
         <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle" id="logo">
-        <h1><a href="http://localhost/web_project/first_project_180210/rich/index.php">JavaScript</a></h1>
+        <h1><a href="/web_project/first_project_180210/rich/index.php">JavaScript</a></h1>
       <!-- </div> -->
       </header>
 
@@ -48,7 +48,7 @@
       <ol class="nav nav-pills nav-stacked">
         <?php
         while($row = mysqli_fetch_assoc($res)){
-          echo '<li><a href="http://localhost/web_project/first_project_180210/rich/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
+          echo '<li><a href="/web_project/first_project_180210/rich/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
         }
          ?>
       </ol>
@@ -88,13 +88,13 @@
             <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
             <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
           </div>
-          <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">글 작성</a>
+          <a class="btn btn-success btn-lg" href="/web_project/first_project_180210/rich/write.php">글 작성</a>
         </div>
       </div>
   </div>
 </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="http://localhost/web_project/first_project_180210/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  <script src="/web_project/first_project_180210/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
