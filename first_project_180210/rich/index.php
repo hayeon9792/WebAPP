@@ -85,7 +85,9 @@
             <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
           </div>
 
-          <a class="btn btn-success btn-lg" href="/web_project/first_project_180210/rich/write.php">글 작성</a>
+          <a class="btn btn-success btn-lg" href="write.php">글 작성</a>
+          <a class="btn btn-success btn-lg" href="write.php">수정</a>
+          <a class="btn btn-success btn-lg" href="write.php">삭제</a>
 
       </div>
 
