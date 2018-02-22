@@ -84,7 +84,7 @@
             <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
             <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
           </div>
-          <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
+          <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">글 작성</a>
         </div>
 
   </div>

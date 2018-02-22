@@ -11,3 +11,16 @@ body.blue {
 #logo{
   width: 100px;
 }
+
+.container{
+  padding-top: 20px;
+}
+
+.col-md-9{
+  padding-top:20px;
+}
+
+#control {
+  margin-bottom: 20px;
+  float:right;
+}

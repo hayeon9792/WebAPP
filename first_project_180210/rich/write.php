@@ -54,23 +54,32 @@
       </ol>
     </nav>
 
-    <article>
-      <form action="process.php" method="post">
-        <p>
-          제목: <input type="text" name="title" id = "title">
-        </p>
-        <p>
-          작성자: <input type="text" name="author" id= "author">
-        </p>
-        <p>
-          본문: <textarea name="description" id="description"></textarea>
-        </p>
-      <!--  <input type="hidden" role="uploadcare-uploader" name="content"
-         data-crop="disabled"
-         data-images-only="true" /> -->
-        <input type="submit" class="btn btn-success" name="name" value="submit">
-      </form>
-    </article>
+    <div class="col-md-9">
+      <article>
+        <form action="process.php" method="post">
+
+          <div class="form-group">
+            <label for="form-title">제목</label>
+            <input type="text" class="form-control" name = "title" id="form-title" placeholder="제목 입력">
+          </div>
+
+          <div class="form-group">
+            <label for="form-author">작성자</label>
+            <input type="text" class="form-control" name = "author" id="form-author" placeholder="작성자 입력">
+          </div>
+
+          <div class="form-group">
+            <label for="form-content">본문</label>
+            <!-- rows = "10" 본문내용 10문장 크기 -->
+            <textarea class="form-control" rows="10" name="description" id="description" placeholder="본문 내용"></textarea>
+          </div>
+
+        <!--  <input type="hidden" role="uploadcare-uploader" name="content"
+           data-crop="disabled"
+           data-images-only="true" /> -->
+          <input type="submit" class="btn btn-success" name="name" value="submit">
+        </form>
+      </article>
 
     <hr> <!-- 수평선 -->
 
@@ -79,9 +88,9 @@
             <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
             <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
           </div>
-          <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
+          <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">글 작성</a>
         </div>
-
+      </div>
   </div>
 </div>
 
