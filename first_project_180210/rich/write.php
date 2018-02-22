@@ -85,8 +85,8 @@
 
         <div id = "control">
           <div class="btn-group" role="group" aria-label="...">
-            <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
-            <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
+            <input type="button" class="btn btn-default" value="white" id="white_btn"/>
+            <input type="button" class="btn btn-default" value="blue" id="blue_btn"/>
           </div>
           <a class="btn btn-success btn-lg" href="/web_project/first_project_180210/rich/write.php">글 작성</a>
         </div>
@@ -96,5 +96,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="/web_project/first_project_180210/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>
