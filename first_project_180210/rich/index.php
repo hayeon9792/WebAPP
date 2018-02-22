@@ -45,7 +45,7 @@
 
   <div class="row">
     <nav class = "col-md-3">
-      <ol>
+      <ol class="nav nav-pills nav-stacked">
         <?php
         while($row = mysqli_fetch_assoc($res)){
           echo '<li><a href="http://localhost/web_project/first_project_180210/rich/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
@@ -53,14 +53,6 @@
          ?>
       </ol>
     </nav>
-
-    <div id = "control">
-      <div class="btn-group" role="group" aria-label="...">
-        <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
-        <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
-      </div>
-      <a class="btn btn-success" href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
-    </div>
 
     <article>
       <?php
@@ -84,6 +76,17 @@
     }
        ?>
     </article>
+
+    <hr> <!-- 수평선 -->
+
+        <div id = "control">
+          <div class="btn-group" role="group" aria-label="...">
+            <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
+            <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
+          </div>
+          <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
+        </div>
+
   </div>
 </div>
 
