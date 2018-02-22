@@ -35,9 +35,11 @@
   </head>
 
   <body id="target">
-    <header class="jumbotron">
-      <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle">
+    <header class="jumbotron text-center">
+    <!--  <div class="text-center"> -->
+      <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle" id="logo">
       <h1><a href="http://localhost/web_project/first_project_180210/rich/index.php">냥냥이의 하루일과</a></h1>
+    <!-- </div> -->
     </header>
 
 <div class="row">
