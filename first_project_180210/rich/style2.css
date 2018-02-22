@@ -24,3 +24,7 @@ body.blue {
   margin-bottom: 20px;
   float:right;
 }
+
+#colorChange{
+  float:left;
+}

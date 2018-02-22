@@ -54,7 +54,7 @@
       </ol>
     </nav>
 
-    <article>
+    <article class ="col-md-9">
       <?php
       /*
         if(!empty($_GET['id'])) {
@@ -79,16 +79,18 @@
 
     <hr> <!-- 수평선 -->
 
-        <div id = "control">
-          <div class="btn-group" role="group" aria-label="...">
+
+          <div class="btn-group" role="group" aria-label="..." id="colorChange">
             <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
             <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
           </div>
 
-          <a class="btn btn-success btn-lg" href="write.php">글 작성</a>
-          <a class="btn btn-success btn-lg" href="write.php">수정</a>
-          <a class="btn btn-success btn-lg" href="write.php">삭제</a>
-
+      <div id = "control">
+        <div class="btn-group" role="group" aria-label="...">
+          <a class="btn btn-default" href="modify.php">수정</a>
+          <a class="btn btn-default" href="delete.php">삭제</a>
+        </div>
+        <a class="btn btn-success btn-lg" href="write.php">글 작성</a>
       </div>
 
   </div>
