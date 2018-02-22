@@ -44,7 +44,7 @@
       </header>
 
   <div class="row">
-    <nav class = "col-md-3">
+    <nav class = "col-md-3 list">
       <ol class="nav nav-pills nav-stacked">
         <?php
         while($row = mysqli_fetch_assoc($res)){
@@ -54,7 +54,7 @@
       </ol>
     </nav>
 
-    <article class ="col-md-9">
+    <article class ="col-md-9 content">
       <?php
       /*
         if(!empty($_GET['id'])) {
