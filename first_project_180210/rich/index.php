@@ -21,15 +21,27 @@
   <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/rich/style.css">
+
+        <!-- Required meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!--
+  <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/rich/style.css">
+  -->
+  <link rel="stylesheet" type="text/css" href="http://localhost/web_project/first_project_180210/rich/style2.css">
+    <link href="http://localhost/web_project/first_project_180210/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body id="target">
-    <header>
-      <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치">
+    <header class="jumbotron">
+      <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle">
       <h1><a href="http://localhost/web_project/first_project_180210/rich/index.php">냥냥이의 하루일과</a></h1>
     </header>
-    <nav>
+
+<div class="row">
+  <nav class = "col-md-3">
     <ol>
       <?php
       while($row = mysqli_fetch_assoc($res)){
@@ -42,9 +54,6 @@
   <div id = "control">
     <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
     <input type="button" value="blue"onclick="document.getElementById('target').className='blue'"/>
-
-
-
     <a href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
   </div>
 
@@ -70,6 +79,9 @@
   }
      ?>
   </article>
+</div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://localhost/web_project/first_project_180210/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
