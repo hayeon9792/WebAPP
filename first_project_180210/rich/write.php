@@ -1,7 +1,8 @@
 <?php
-  require("lib/db.php");
-  $conn = db_init("localhost","root","gkdus9792","webrich");
-  $res = mysqli_query($conn, "SELECT * FROM homepage"); //topic 테이블 가져옴
+require("config/config.php");
+require("lib/db.php");
+$conn = db_init($config["host"],$config["duser"],$config["dpw"],$config["dname"] );
+$res = mysqli_query($conn, "SELECT * FROM homepage"); //topic 테이블 가져옴
 
   /*
   $row = mysqli_fetch_assoc($res); // 조회한 테이블의 첫번째 행을 return,

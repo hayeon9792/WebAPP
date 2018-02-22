@@ -1,6 +1,7 @@
 <?php
+  require("config/config.php");
   require("lib/db.php");
-  $conn = db_init("localhost","root","gkdus9792","webrich");
+  $conn = db_init($config["host"],$config["duser"],$config["dpw"],$config["dname"] );
   $res = mysqli_query($conn, "SELECT * FROM homepage"); //topic 테이블 가져옴
 
   /*
