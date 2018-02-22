@@ -35,52 +35,54 @@
   </head>
 
   <body id="target">
-    <header class="jumbotron text-center">
-    <!--  <div class="text-center"> -->
-      <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle" id="logo">
-      <h1><a href="http://localhost/web_project/first_project_180210/rich/index.php">냥냥이의 하루일과</a></h1>
-    <!-- </div> -->
-    </header>
+    <div class="container">
+      <header class="jumbotron text-center">
+      <!--  <div class="text-center"> -->
+        <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle" id="logo">
+        <h1><a href="http://localhost/web_project/first_project_180210/rich/index.php">JavaScript</a></h1>
+      <!-- </div> -->
+      </header>
 
-<div class="row">
-  <nav class = "col-md-3">
-    <ol>
+  <div class="row">
+    <nav class = "col-md-3">
+      <ol>
+        <?php
+        while($row = mysqli_fetch_assoc($res)){
+          echo '<li><a href="http://localhost/web_project/first_project_180210/rich/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
+        }
+         ?>
+      </ol>
+    </nav>
+
+    <div id = "control">
+      <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
+      <input type="button" value="blue"onclick="document.getElementById('target').className='blue'"/>
+      <a href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
+    </div>
+
+    <article>
       <?php
-      while($row = mysqli_fetch_assoc($res)){
-        echo '<li><a href="http://localhost/web_project/first_project_180210/rich/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
-      }
+      /*
+        if(!empty($_GET['id'])) {
+          echo file_get_contents($_GET['id'].".txt");
+        } else {
+          echo file_get_contents("title.txt");
+        }
+      */
+      if(!empty($_GET['id'])){
+
+      $sql = 'SELECT * FROM homepage WHERE id='.$_GET['id']; // SQL문을 변수로 저장해서 사용
+      $res = mysqli_query($conn, $sql);
+      $row=mysqli_fetch_assoc($res);
+
+      echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
+      echo strip_tags($row['description'],'<a><h1><h2><h3><li><ol>');
+    } else {
+      echo file_get_contents("title.txt");
+    }
        ?>
-    </ol>
-  </nav>
-
-  <div id = "control">
-    <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
-    <input type="button" value="blue"onclick="document.getElementById('target').className='blue'"/>
-    <a href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
+    </article>
   </div>
-
-  <article>
-    <?php
-    /*
-      if(!empty($_GET['id'])) {
-        echo file_get_contents($_GET['id'].".txt");
-      } else {
-        echo file_get_contents("title.txt");
-      }
-    */
-    if(!empty($_GET['id'])){
-
-    $sql = 'SELECT * FROM homepage WHERE id='.$_GET['id']; // SQL문을 변수로 저장해서 사용
-    $res = mysqli_query($conn, $sql);
-    $row=mysqli_fetch_assoc($res);
-
-    echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
-    echo strip_tags($row['description'],'<a><h1><h2><h3><li><ol>');
-  } else {
-    echo file_get_contents("title.txt");
-  }
-     ?>
-  </article>
 </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
