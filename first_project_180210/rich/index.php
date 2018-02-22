@@ -81,8 +81,8 @@
 
 
           <div class="btn-group" role="group" aria-label="..." id="colorChange">
-            <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
-            <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
+            <input type="button" class="btn btn-default" value="white" id="white_btn"/>
+            <input type="button" class="btn btn-default" value="blue" id="blue_btn"/>
           </div>
 
       <div id = "control">
