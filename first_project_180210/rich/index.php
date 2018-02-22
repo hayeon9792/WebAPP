@@ -70,12 +70,12 @@
       $row=mysqli_fetch_assoc($res);
 
       echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
-      echo strip_tags($row['description'],'<a><h1><h2><h3><li><ol>');
+      echo strip_tags($row['description'],'<h1><h2><h3><li><ol>');
     } else {
       echo file_get_contents("title.txt");
     }
        ?>
-    </article>
+         </article>
 
     <hr> <!-- 수평선 -->
 
@@ -84,8 +84,10 @@
             <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
             <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
           </div>
+
           <a class="btn btn-success btn-lg" href="http://localhost/web_project/first_project_180210/rich/write.php">글 작성</a>
-        </div>
+
+      </div>
 
   </div>
 </div>
