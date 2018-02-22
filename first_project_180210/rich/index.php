@@ -35,7 +35,7 @@
   </head>
 
   <body id="target">
-    <div class="container">
+    <div class="container"> <!-- container-fluid -->
       <header class="jumbotron text-center">
       <!--  <div class="text-center"> -->
         <img src="https://i.pinimg.com/236x/de/52/c6/de52c6486a2125f3635c3ee4739f2326.jpg" alt="리치" class="img-circle" id="logo">
@@ -55,9 +55,11 @@
     </nav>
 
     <div id = "control">
-      <input type="button" value="white" onclick="document.getElementById('target').className='white'"/>
-      <input type="button" value="blue"onclick="document.getElementById('target').className='blue'"/>
-      <a href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
+      <div class="btn-group" role="group" aria-label="...">
+        <input type="button" class="btn btn-default" value="white" onclick="document.getElementById('target').className='white'"/>
+        <input type="button" class="btn btn-default" value="blue"onclick="document.getElementById('target').className='blue'"/>
+      </div>
+      <a class="btn btn-success" href="http://localhost/web_project/first_project_180210/rich/write.php">작성</a>
     </div>
 
     <article>
